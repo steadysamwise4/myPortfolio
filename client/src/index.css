@@ -91,6 +91,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.profile_img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%
+}
+
 header {
   background: var(--dark);
 }
@@ -181,8 +187,16 @@ textarea {
   justify-content: space-between;
 }
 
+.justify-space-around-xl {
+  justify-content: space-around;
+}
+
 .flex-end {
   justify-content: flex-end;
+}
+
+.align-center-xl {
+  align-items: center;
 }
 
 .mx-1 {
