@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Header = () => {
+const Projects = () => {
     
   
     return (
@@ -29,5 +29,5 @@ const Header = () => {
     );
   };
   
-  export default Header;
+  export default Projects;
   

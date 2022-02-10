@@ -130,6 +130,10 @@ img {
   max-width: 100%;
 }
 
+.link:hover {
+  color: var(--primary)
+}
+
 span[role="img"] {
   cursor: default;
 }

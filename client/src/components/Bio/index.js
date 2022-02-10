@@ -3,7 +3,7 @@ import familyImage from "../../assets/images/family.jpg"
 
 function About() {
   return (
-    <section>
+    <section className="container">
       <h1 id="about">Bio</h1>
       <img src={familyImage} className="my-2" style={{ width: "100% "}} alt="my family"/>
       <h5>
