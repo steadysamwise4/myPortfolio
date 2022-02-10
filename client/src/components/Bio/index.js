@@ -1,9 +1,11 @@
 import React from 'react';
+import familyImage from "../../assets/images/family.jpg"
 
 function About() {
   return (
     <section>
       <h1 id="about">Bio</h1>
+      <img src={familyImage} className="my-2" style={{ width: "100% "}} alt="my family"/>
       <p>
         Full stack capable web developer with unconventional background,
         learning new things daily, and loving it. Nearing completion of the
