@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Bio from './components/Bio'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import Projects from './components/Projects'
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/projects" component={Projects} />
         </Switch>
       </main>
+      <Footer></Footer>
     </div>
     </Router>
   );

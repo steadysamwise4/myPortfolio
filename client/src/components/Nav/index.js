@@ -5,32 +5,37 @@ import samImage from '../../assets/images/sam.JPG'
 function Nav() {
   return (
     <header>
-      <h2 className="flex-row align-center-xl">
+      <section className="flex-row align-center justify-center col-12">
         <img src={samImage} alt="Sam" className="profile_img mx-2 my-2 " />
         <Link to="/">
-        <h3 className="link">Sam Davenport</h3>
+          <h1 className="link">Sam Davenport</h1>
         </Link>
-      </h2>
-      <nav>
-        <ul className="flex-row justify-space-around-xl">
-          <li className="mx-2">
-          <Link to="/">
-            <h4 className="link">Bio</h4>
-            </Link>
-          </li>
-          <li className="mx-2">
-          <Link to="/projects">
-            <h4 className="link">Projects</h4>
-            </Link>
-          </li>
-          <li className="mx-2">
-            <h4 className="link">Contact</h4>
-          </li>
-          <li className="mx-2">
-            <h4 className="link">Resume</h4>
-          </li>
-        </ul>
-      </nav>
+
+        <nav className="col-12 py-0 my-2">
+          <div className="flex-row justify-space-around nav-border">
+            
+              <Link to="/" className='nav-link'>
+                <h4 className="link">Bio</h4>
+              </Link>
+            
+            
+              <Link to="/projects" className='nav-link'>
+                <h4 className="link">Projects</h4>
+              </Link>
+            
+           
+              <Link to="/" className='nav-link'>
+                <h4 className="link" >Contact</h4>
+              </Link>
+            
+           
+              <Link to="/" className='nav-link'>
+                <h4 className="link">Resume</h4>
+              </Link>
+            
+          </div>
+        </nav>
+      </section>
     </header>
   );
 }

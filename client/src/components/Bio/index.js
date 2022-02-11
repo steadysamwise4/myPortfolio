@@ -5,16 +5,21 @@ function About() {
   return (
     <section className="container">
       <h1 id="about">Bio</h1>
-      <img src={familyImage} className="my-2" style={{ width: "100% "}} alt="my family"/>
+      <img
+        src={familyImage}
+        className="my-2"
+        style={{ width: "100% " }}
+        alt="my family"
+      />
       <h5>
         Full stack capable web developer with unconventional background,
         learning new things daily, and loving it. Nearing completion of the
         coding bootcamp at The University of Kansas. Newly developed skills
-        include JavaScript, CSS, Handlebars.js, mySQL, Node.js, Express.js, and
-        Sequelize. Known for being very thoughtful, practical, and meticulous.
-        Passionate about solving problems and excited to stretch the limits of
-        my abilities while contributing my efforts in the service of an
-        excellent future employer. In my previous career, I was very
+        include JavaScript, CSS, mySQL, MongoDB, Mongoose, Node, Express,
+        Sequelize, and React. Known for being very thoughtful, practical, and
+        meticulous. Passionate about solving problems and excited to stretch the
+        limits of my abilities while contributing my efforts in the service of
+        an excellent future employer. In my previous career, I was very
         instrumental in streamlining processes in order to increase factory
         production many fold in the area I was lead over. Recently, I worked on
         a team of five to develop a full stack travel blog site including
