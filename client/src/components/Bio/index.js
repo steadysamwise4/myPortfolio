@@ -4,7 +4,7 @@ import familyImage from "../../assets/images/family.jpg"
 function About() {
   return (
     <section className="container">
-      <h1 id="about">Bio</h1>
+      <h1>Bio</h1>
       <img
         src={familyImage}
         className="my-2"
