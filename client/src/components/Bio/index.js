@@ -11,7 +11,7 @@ function About() {
         style={{ width: "100% " }}
         alt="my family"
       />
-      <h5>
+      <h6>
         Full stack capable web developer with unconventional background,
         learning new things daily, and loving it. Nearing completion of the
         coding bootcamp at The University of Kansas. Newly developed skills
@@ -29,7 +29,7 @@ function About() {
         weeks of time. I’m very excited to continue gaining more knowledge,
         learning and adopting best practices, and further honing my skills as a
         member of a fast-paced, quality-driven team.
-      </h5>
+      </h6>
     </section>
   );
 }

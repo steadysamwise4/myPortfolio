@@ -30,13 +30,13 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
   background: var(--dark);
   color: var(--light);
-  font-family: 'Poiret One', cursive;
+  font-family:Arial, Helvetica, sans-serif
 
 }
 
@@ -47,9 +47,9 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   margin: 5px 0;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 p {
@@ -82,13 +82,14 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: none;
+  color: var(--primary)
 }
 
 .profile_img {
@@ -140,6 +141,10 @@ img {
 .link:hover {
   color: var(--primary);
   text-decoration: none;
+}
+
+.no-link {
+  color:white;
 }
 
 .nav-link {
@@ -311,8 +316,8 @@ textarea {
 }
 
 .modalTitle {
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 25px;
+	font-weight: 500;
 	margin-bottom: 25px;
 }
 
@@ -328,7 +333,7 @@ button {
 	padding: 10px 15px;	
 }
 
-a {
+/* a {
 	border-radius: 5px;
 	color: var(--primary);
 	font-weight: 600;
@@ -336,10 +341,10 @@ a {
 	margin-left: -2px;
 	margin-right: -2px;
 	
-}
+} */
 
 .navActive {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 /* FLEX CONTENT */
