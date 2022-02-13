@@ -24,7 +24,7 @@ function Nav( {linkSelected, handleLinkChange }) {
               </Link>
             
            
-              <Link to="/" className='nav-link' onClick={() => handleLinkChange('Contact')}>
+              <Link to="/contact" className='nav-link' onClick={() => handleLinkChange('Contact')}>
                 <h4 className={linkSelected === 'Contact' ? "link navActive" : "link"} >Contact</h4>
               </Link>
             

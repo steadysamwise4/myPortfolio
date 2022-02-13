@@ -62,7 +62,7 @@ function ProjectList() {
                              onClose={toggleModal}/>}
        <div className="flex-row my-2 mx-2">
            {projects.map((image, i) => (
-               <div className='col-12 col-lg-5 mx-2 link' onClick={() => toggleModal(image, i)}>
+               <div className='col-12 col-lg-5 mx-2 link' onClick={() => toggleModal(image, i)} key={image.name}>
                <h5>{image.name}</h5>
                <img 
                 src={require(`../../assets/images/${i}.png`)}
