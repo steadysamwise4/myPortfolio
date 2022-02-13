@@ -241,7 +241,9 @@ textarea {
 .block {
   display: block;
 }
-
+.error {
+  color: red;
+}
 .container {
   width: 85%;
   max-width: 1200px;

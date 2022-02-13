@@ -1,40 +1,38 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../../utils/helpers';
+import { useMutation } from '@apollo/client';
+import { ADD_CONTACT } from '../../utils/mutations';
 
 function ContactForm() {
-    const [formState, setFormState] = useState({ name: '', email: '', message: ''});
-    const { name, email, message } = formState;
-    const [errorMessage, setErrorMessage] = useState('');
+    const [formState, setFormState] = useState({ contactName: '', email: '', message: ''});
+    const { contactName, email, message } = formState;
     const submitMessage = 'Your message has been submitted, Thanks!';
     const [submitDisplay, setSubmitDisplay ]= useState('none');
-    function handleChange(e) {
-        if (e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
-            console.log(isValid);
-            // isValid conditional statement
-            if (!isValid) {
-                setErrorMessage('Your email is invalid.');
-              } else {
-                setErrorMessage('');
-              }
-          } else {
-            if (!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
-            } else {
-                setErrorMessage('');
-            }
-        }
-    console.log('errorMessage', errorMessage);
-        if (!errorMessage) {
-            setFormState({...formState, [e.target.name]: e.target.value })
-        }
-    }
+    const [addContact, { error }] = useMutation(ADD_CONTACT);
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+    
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
 
-    function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formState);
-        setSubmitDisplay('block');
-        setTimeout(() => setSubmitDisplay('none'), 3000);
+        try {
+            // execute addContact mutation and pass in variable data from form
+            const { data } = await addContact({
+              variables: { ...formState }
+            });
+            console.log(data)
+            setSubmitDisplay('block');
+            setTimeout(() => setSubmitDisplay('none'), 3000);
+            
+          } catch (e) {
+            console.error(e);
+            
+          }
             
         
 
@@ -48,9 +46,9 @@ function ContactForm() {
             <label htmlFor="name" >Name:</label>
             <input
               type="text"
-              defaultValue={name}
-              onBlur={handleChange}
-              name="name"
+              value={contactName}
+              onChange={handleChange}
+              name="contactName"
               id="name"
             />
           </div>
@@ -58,8 +56,8 @@ function ContactForm() {
             <label htmlFor="email" >Email address:</label>
             <input
               type="email"
-              defaultValue={email}
-              onBlur={handleChange}
+              value={email}
+              onChange={handleChange}
               name="email"
               id="email"
             />
@@ -68,19 +66,16 @@ function ContactForm() {
             <label htmlFor="message" >Message:</label>
             <textarea
               name="message"
-              defaultValue={message}
-              onBlur={handleChange}
+              value={message}
+              onChange={handleChange}
               rows="5"
               id="message"
             />
           </div>
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
-            </div>
-          )}
+         
           <button data-testid="button" type="submit">Submit</button>
         </form>
+        {error && <div className="error">Message failed to send!  All fields required!</div>}
         <h5 className={submitDisplay}>{submitMessage}</h5>
       </section>
     );

@@ -6,25 +6,40 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
 import ContactForm from './components/Contact';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3009/graphql',
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
+
 function App() {
   const [linkSelected, setLinkSelected] = useState('');
   
 
   const handleLinkChange = (link) => setLinkSelected(link);
   return (
-    <Router>
-    <div>
-      <Nav linkSelected={linkSelected} handleLinkChange={handleLinkChange}></Nav>
-      <main className="container">
-        <Switch>
-        <Route exact path="/" component={Bio} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/contact" component={ContactForm} />
-        </Switch>
-      </main>
-      <Footer></Footer>
-    </div>
-    </Router>
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Nav
+            linkSelected={linkSelected}
+            handleLinkChange={handleLinkChange}
+          ></Nav>
+          <main className="container">
+            <Switch>
+              <Route exact path="/" component={Bio} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/contact" component={ContactForm} />
+            </Switch>
+          </main>
+          <Footer></Footer>
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 
