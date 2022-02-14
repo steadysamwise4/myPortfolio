@@ -10,7 +10,7 @@ import Resume from './components/Resume';
 import NoMatch from './components/NoMatch';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3009/graphql',
+  uri: '/graphql',
 });
 
 const client = new ApolloClient({
