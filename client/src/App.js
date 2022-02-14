@@ -6,6 +6,8 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
 import ContactForm from './components/Contact';
+import Resume from './components/Resume';
+import NoMatch from './components/NoMatch';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 const httpLink = createHttpLink({
   uri: 'http://localhost:3009/graphql',
@@ -34,6 +36,8 @@ function App() {
               <Route exact path="/" component={Bio} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/contact" component={ContactForm} />
+              <Route exact path="/resume" component={Resume} />
+              <Route component={NoMatch} />
             </Switch>
           </main>
           <Footer></Footer>

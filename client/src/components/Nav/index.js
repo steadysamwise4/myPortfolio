@@ -29,7 +29,7 @@ function Nav( {linkSelected, handleLinkChange }) {
               </Link>
             
            
-              <Link to="/" className='nav-link' onClick={() => handleLinkChange('Resume')}>
+              <Link to="/resume" className='nav-link' onClick={() => handleLinkChange('Resume')}>
                 <h4 className={linkSelected === 'Resume' ? "link navActive" : "link"}>Resume</h4>
               </Link>
             

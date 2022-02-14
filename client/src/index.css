@@ -244,6 +244,10 @@ textarea {
 .error {
   color: red;
 }
+.border:hover {
+  border:var(--primary) solid 3px;
+  padding: 5px;
+}
 .container {
   width: 85%;
   max-width: 1200px;
