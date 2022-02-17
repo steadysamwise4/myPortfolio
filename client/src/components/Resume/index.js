@@ -1,5 +1,5 @@
 import React from 'react';
-import resumeImg from '../../assets/images/resume.png';
+import resumeImg from '../../assets/images/resume3.png';
 
 
 
@@ -25,7 +25,7 @@ function Resume () {
           </ul>
         </div>
         <div >
-            <a href='https://www.linkedin.com/in/davenportsam44/overlay/1635482650816/single-media-viewer?type=DOCUMENT&profileId=ACoAADbV8k0BEFmQ1LzNApBAd2BhVkaP3U4hfgo&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BdZgyqZgFRo%2BzxTYt2i0RYQ%3D%3D' >
+            <a href='https://www.linkedin.com/in/davenportsam44/overlay/1635483205238/single-media-viewer?type=DOCUMENT&profileId=ACoAADbV8k0BEFmQ1LzNApBAd2BhVkaP3U4hfgo&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB3FzVd7zRK2jRLr8scKdJg%3D%3D' >
             <img src={resumeImg} alt='resume' />
             <h6 className='text-center'>Download resume</h6>
             </a>
