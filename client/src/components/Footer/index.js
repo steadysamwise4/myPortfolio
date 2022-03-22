@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer >
         <h6 className='text-center'>Thanks for visiting! Check out the links below.</h6>
+        <p className='text-center'>davenportsam44@gmail.com</p>
         <div className="my-2 flex-row justify-center">
       <a  href='https://github.com/steadysamwise4' className='px-2'>
           <img src={gitHub} alt='github link' className='github-link mx-2'/>

@@ -41,6 +41,13 @@ function ProjectList() {
       url: "https://secret-temple-71857.herokuapp.com/"
     },
     {
+      name: "dg-scorecard",
+      description:
+        "A PWA with which users are able to keep track of their score while playing disc golf, then access all of their scores and other data in their user account.",
+      owner: "steadysamwise4",
+      url: "https://calm-peak-91863.herokuapp.com/"
+    },
+    {
       name: "explore_national_parks",
       description:
         "Explore National Parks is a Web Application that allows the user to view the details of all National Parks in America and plan their potential visit. The Application uses National Park Service API, OpenWeather API and is written in HTML, CSS and Javascript.",

@@ -22,6 +22,7 @@ function Resume () {
             <li key="P6">Express</li>
             <li key="P7">Sequelize</li>
             <li key="P8">React</li>
+            <li key="P8">GraphQL</li>
           </ul>
         </div>
         <div >
