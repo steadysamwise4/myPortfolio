@@ -8,12 +8,8 @@ mongoose
     //   useCreateIndex: true,
     //   useFindAndModify: false
   })
-  .then((result) => {
-    console.log(process.env.MONGODB_URI);
-    console.log(result);
-  })
+  .then((result) => {})
   .catch((err) => {
-    console.log(process.env.MONGODB_URI);
     console.log(err);
   });
 

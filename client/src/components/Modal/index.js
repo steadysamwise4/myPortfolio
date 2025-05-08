@@ -8,10 +8,21 @@ function Modal({ currentProject, onClose }) {
       <div className='modalContainer'>
         <h2 className='modalTitle flex-row justify-space-around'>
           {name}
-          <a href={`https://github.com/${owner}/${name}`}>Github</a>
-          <a href={url} target='_blank' rel='noreferrer'>
-            See it deployed!
-          </a>
+          {owner && (
+            <a
+              href={`https://github.com/${owner}/${name}`}
+              target='_blank'
+              rel='noreferrer'
+            >
+              Github
+            </a>
+          )}
+
+          {url && (
+            <a href={url} target='_blank' rel='noreferrer'>
+              See it deployed!
+            </a>
+          )}
         </h2>
         <img alt={name} src={require(`../../assets/images/${index}.png`)} />
         <p>{description}</p>
